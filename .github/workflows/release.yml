@@ -19,11 +19,11 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean package\
+        run: mvn clean package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: target/Skill_Issue_SMP-*.jar\
+          files: target/Skill_Issue_SMP-*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
